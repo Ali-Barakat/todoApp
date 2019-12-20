@@ -25,6 +25,7 @@ code {
 }
 
 .text-center {
+  padding-top: 15px;
   text-align: center;
 }
 

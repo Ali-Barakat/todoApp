@@ -16,11 +16,16 @@ class AddItems extends Component{
 
     handleSubmit = (e) =>{
         e.preventDefault()
-        this.props.addItem(this.state)
+        if(e.target.name.value ==='' || e.target.age.value === '' ){
+            return false
+        } else {
+                    this.props.addItem(this.state)
         this.setState({
             name: '',
             age: ''
         })
+        }
+
     }
 
 
