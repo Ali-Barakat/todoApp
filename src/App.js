@@ -23,11 +23,13 @@ class App extends Component {
     this.setState({items})
   }
 
-  addItem = (item) =>{
-    item.id = Math.random();
+  addItem = (item)=>{
+    item.id = Math.random()
     let items = this.state.items
     items.push(item)
     this.setState({items})
+
+    console.log(this.state.items)
   }
 
 
@@ -47,7 +49,7 @@ class App extends Component {
   render(){
     return (
       <div className="container">
-        TodoList App
+        <h1 className="text-center">Todo List</h1>
         <TodoItems items ={this.state.items} deleteItem={this.deleteItem} />
         <AddItems addItem={this.addItem} />
       </div>
